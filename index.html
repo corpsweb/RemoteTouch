@@ -110,18 +110,18 @@
 			$(document).ready(function() {
 
 				
-   					$("#timeline_01").click( function () { sendCommand("galaxy.signage.me","rc_sendevent","123456","2","rc_timeline_01"); return false });
-					$("#timeline_02").click( function () { sendCommand("galaxy.signage.me","rc_sendevent","123456","2","rc_timeline_02"); return false });
-					$("#timeline_03").click( function () { sendCommand("galaxy.signage.me","rc_sendevent","123456","2","rc_timeline_03"); return false });
-					$("#timeline_04").click( function () { sendCommand("galaxy.signage.me","rc_sendevent","123456","2","rc_timeline_04"); return false });
+   					$("#timeline_01").click( function () { sendRemoteTouch("rc_timeline_01"); return false });
+					$("#timeline_02").click( function () { sendRemoteTouch("rc_timeline_02"); return false });
+					$("#timeline_03").click( function () { sendRemoteTouch("rc_timeline_03"); return false });
+					$("#timeline_04").click( function () { sendRemoteTouch("rc_timeline_04"); return false });
 				
     
-   					$("#previous").click( function () { sendCommand("galaxy.signage.me","rc_sendevent","123456","2","rc_prev"); return false });
-       					$("#next").click( function ()     { sendCommand("galaxy.signage.me","rc_sendevent","123456","2","rc_next"); return false });
+   					$("#previous").click( function () { sendRemoteTouch("rc_prev"); return false });
+       					$("#next").click( function ()     { sendRemoteTouch("rc_next"); return false });
 
 
   					$("#exitButton").click( function () {
-					sendCommand("galaxy.signage.me","rc_sendevent","123456","2","rc_home");
+					sendRemoteTouch("rc_home");
 					alert('Thank you for using RemoteTouch');
 					window.location="http://www.digitalsignage.com";
 
