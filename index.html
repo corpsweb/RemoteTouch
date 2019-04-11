@@ -97,33 +97,35 @@
 		</style>
 		
 		<!-- jQuery library -->
-		<script type="text/javascript" src = "jquery-1.4.min.js"></script>
-		<script type="text/javascript" src = "jquery.easing-1.3.js"></script>
-	        <script type="text/javascript" src="http://galaxy.signage.me/Code/js/remoteTouch.js"></script>
+		<style></style><script type="text/javascript" src="./js/jquery-1.4.min.js"></script>
+		<script type="text/javascript" src="./js/jquery.easing-1.3.js"></script>
+	    <script type="text/javascript" src="http://galaxy.signage.me/Code/js/remoteTouch.js"></script>
+
 
 		
 		<!-- iosSlider plugin -->
-		<script src = "jquery.iosslider.js"></script>
+		<script src="./js/jquery.iosslider.js"></script>
 	
-			<script type="text/javascript">
+		<script type="text/javascript">
 			$(document).ready(function() {
 
-				sendRemoteTouch("ev_welcome");
 				
-   				$("#timeline_01").click( function () { sendRemoteTouch("rc_timeline_01"); return false });
-       				$("#timeline_02").click( function () { sendRemoteTouch("rc_timeline_02"); return false });
-      				$("#timeline_03").click( function () { sendRemoteTouch("rc_timeline_03"); return false });
-      				$("#timeline_04").click( function () { sendRemoteTouch("rc_timeline_04"); return false });
+   					$("#timeline_01").click( function () { sendRemoteTouch("rc_timeline_01"); return false });
+					$("#timeline_02").click( function () { sendRemoteTouch("rc_timeline_02"); return false });
+					$("#timeline_03").click( function () { sendRemoteTouch("rc_timeline_03"); return false });
+					$("#timeline_04").click( function () { sendRemoteTouch("rc_timeline_04"); return false });
+				
+    
+   					$("#previous").click( function () { sendRemoteTouch("rc_prev"); return false });
+       					$("#next").click( function ()     { sendRemoteTouch("rc_next"); return false });
 
-   				$("#previous").click( function () { sendRemoteTouch("rc_prev"); return false });
-       				$("#next").click( function ()     { sendRemoteTouch("rc_next"); return false });
 
+  					$("#exitButton").click( function () {
+					sendRemoteTouch("rc_home");
+					alert('Thank you for using RemoteTouch');
+					window.location="http://www.digitalsignage.com";
 
-  				$("#exitButton").click( function () {
-				   sendRemoteTouch("exitButton");
-				   alert('Thank you for using RemoteTouch');
-				   window.location="http://www.digitalsignage.com";
-				   return false
+				    return false
 				 });
 
 
@@ -135,7 +137,8 @@
 				});
 				
 			});
-		</script>		
+		</script>
+		
 		<title>Touch Screen Selection Page</title>
 		
 	<style type="text/css">
